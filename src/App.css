@@ -118,8 +118,7 @@ p {
   align-items: center;
   justify-content: space-between;
   padding: 1rem 1.5rem;
-  position: sticky;
-  top: 1rem;
+  position: relative;
   z-index: 50;
   transition: all 0.3s ease;
 }
