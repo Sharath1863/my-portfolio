@@ -68,10 +68,10 @@ function App() {
       <main>
         <section className="hero panel">
           <p className="eyebrow">AWS Cloud Engineer</p>
-          <h1>Cloud-native delivery built for speed, stability, and scale.</h1>
+          <h1>DevOps and Cloud Engineer focused on reliable AWS delivery.</h1>
           <p className="lead">
-            DevOps and Cloud Engineer with hands-on experience in AWS, CI/CD,
-            containerized deployments, and monitoring-driven operations.
+            Hands-on experience across AWS infrastructure, CI/CD automation,
+            containerized deployments, and production monitoring.
           </p>
           <div className="hero-actions">
             <a className="btn btn-solid" href="#projects">
@@ -84,15 +84,15 @@ function App() {
           <div className="metrics">
             <article>
               <h3>8+</h3>
-              <p>AWS-backed application deployments</p>
+              <p>AWS application deployments completed</p>
             </article>
             <article>
               <h3>3</h3>
-              <p>Major projects highlighted in this portfolio</p>
+              <p>Featured projects in this portfolio</p>
             </article>
             <article>
               <h3>2025-Present</h3>
-              <p>Professional DevOps and Cloud engineering role</p>
+              <p>Professional DevOps and Cloud engineering experience</p>
             </article>
           </div>
         </section>
@@ -129,8 +129,8 @@ function App() {
           <div className="section-head">
             <h2>Featured Projects</h2>
             <p>
-              Project work centered on CI/CD automation, monitoring, and
-              production-grade cloud deployments.
+              Projects focused on CI/CD, monitoring, and production-grade AWS
+              deployments.
             </p>
           </div>
 
