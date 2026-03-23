@@ -14,38 +14,25 @@ const coreSkills = [
 ]
 
 const services = [
-  'EC2',
-  'IAM',
-  'S3',
-  'SQS',
-  'Lambda',
-  'RDS',
-  'ECS',
-  'ECR',
-  'SNS',
-  'VPC',
-  'Elastic Beanstalk',
-  'SES',
+  'EC2', 'IAM', 'S3', 'SQS', 'Lambda', 'RDS',
+  'ECS', 'ECR', 'SNS', 'VPC', 'Elastic Beanstalk', 'SES'
 ]
 
 const projects = [
   {
-    title: 'Infrastructure Monitoring with Prometheus and Grafana',
-    stack: 'Docker, Docker Compose, Prometheus, Grafana, Linux',
-    summary:
-      'Built a Dockerized monitoring stack with Node Exporter and cAdvisor, then designed custom Grafana dashboards for real-time infrastructure and container visibility.',
+    title: 'Infrastructure Monitoring System',
+    stack: 'Docker, Prometheus, Grafana, Linux',
+    summary: 'Built a containerized monitoring stack with custom dashboards for real-time infrastructure visibility and alerting.',
   },
   {
-    title: 'Website Downtime Monitoring with AWS Lambda',
-    stack: 'AWS Lambda, CloudWatch, Python, Serverless',
-    summary:
-      'Implemented a serverless health-check system using Python-based Lambda functions, CloudWatch scheduling, and alerting for downtime and response failures.',
+    title: 'Serverless Uptime Monitor',
+    stack: 'AWS Lambda, CloudWatch, Python',
+    summary: 'Developed a lightweight, automated health-check system using Lambda functions and CloudWatch for immediate downtime alerts.',
   },
   {
-    title: 'End-to-End CI/CD Multi-Stack Deployment',
-    stack: 'AWS, Docker, Kubernetes, Jenkins, GitHub Actions, Prometheus, Grafana',
-    summary:
-      'Delivered 8+ production deployments for Django, FastAPI, Node.js, PHP, and Laravel apps with automated pipelines, containerization, orchestration, and observability.',
+    title: 'Automated CI/CD Pipelines',
+    stack: 'AWS, Kubernetes, Jenkins, GitHub Actions',
+    summary: 'Designed and maintained robust deployment pipelines for multiple applications, reducing manual overhead and release times.',
   },
 ]
 
@@ -54,174 +41,159 @@ function App() {
     <div className="site-shell">
       <div className="bg-glow bg-glow-one" aria-hidden="true" />
       <div className="bg-glow bg-glow-two" aria-hidden="true" />
+      <div className="bg-glow bg-glow-three" aria-hidden="true" />
 
-      <header className="topbar">
-        <p className="brand">Sharath Chandra C</p>
+      <header className="topbar glass-panel">
+        <div className="brand brand-terminal">
+          <span className="prompt">~</span><span className="dollar">$</span>
+          <span className="user"> portfolio</span>
+          <span className="cursor-blink">_</span>
+        </div>
         <nav className="menu" aria-label="Main navigation">
           <a href="#skills">Skills</a>
           <a href="#projects">Projects</a>
           <a href="#contact">Contact</a>
-          <a href="#resume">Resume</a>
         </nav>
       </header>
 
       <main>
-        <section className="hero panel">
-          <p className="eyebrow">AWS Cloud Engineer</p>
-          <h1>Building reliable AWS platforms with automation-first DevOps.</h1>
-          <p className="lead">
-            DevOps and Cloud Engineer with hands-on delivery across AWS
-            infrastructure, CI/CD pipelines, containerized workloads, and
-            monitoring for production environments.
-          </p>
-          <div className="hero-actions">
-            <a className="btn btn-solid" href="#projects">
-              Explore Projects
-            </a>
-            <a className="btn btn-ghost" href="#contact">
-              Contact Me
-            </a>
+        <section className="hero">
+          <div className="hero-content">
+            <span className="badge">Cloud & Infrastructure Engineer</span>
+            <h1 className="hero-title">
+              Sharath Chandra C
+            </h1>
+            <p className="lead">
+              DevOps and Cloud Engineer specializing in designing resilient cloud architectures, streamlining CI/CD pipelines, and maintaining highly available systems.
+            </p>
+            <div className="hero-actions">
+              <a className="btn btn-primary" href="#projects">
+                View My Work
+              </a>
+              <a className="btn btn-secondary" href="#contact">
+                Get In Touch
+              </a>
+              <a className="btn btn-outline" href="/resume.pdf" target="_blank" rel="noopener noreferrer">
+                Resume
+              </a>
+            </div>
           </div>
-          <div className="metrics">
-            <article>
-              <h3>8+</h3>
-              <p>Production deployments delivered on AWS</p>
-            </article>
-            <article>
-              <h3>3</h3>
-              <p>Portfolio projects with real implementation depth</p>
-            </article>
-            <article>
+
+          <div className="metrics-grid">
+            <div className="metric-card glass-panel">
+              <div className="metric-icon">🚀</div>
+              <h3>15+</h3>
+              <p>Production Deployments</p>
+            </div>
+            <div className="metric-card glass-panel">
+              <div className="metric-icon">🛠️</div>
+              <h3>7+</h3>
+              <p>Comprehensive Projects</p>
+            </div>
+            <div className="metric-card glass-panel">
+              <div className="metric-icon">⏳</div>
               <h3>2025-Present</h3>
-              <p>Professional DevOps and Cloud engineering experience</p>
-            </article>
+              <p>Professional Experience</p>
+            </div>
           </div>
         </section>
 
-        <section id="skills" className="panel section-gap">
+        <section id="skills" className="section-container">
           <div className="section-head">
-            <h2>Core Skills</h2>
-            <p>
-              End-to-end capabilities across infrastructure, automation,
-              container orchestration, and observability.
-            </p>
+            <h2>Technical Arsenal</h2>
+            <p>Core technologies I use to build, deploy, and manage distributed systems.</p>
           </div>
 
           <div className="skill-grid">
             {coreSkills.map((skill) => (
-              <article className="skill-card" key={skill.name}>
+              <div className="skill-card glass-panel" key={skill.name}>
                 <i className={skill.icon} aria-hidden="true" />
-                <h3>{skill.name}</h3>
-              </article>
+                <span>{skill.name}</span>
+              </div>
             ))}
           </div>
 
-          <div className="cloud-service-wrap">
-            <h3>AWS Services</h3>
+          <div className="services-container glass-panel">
+            <h3>AWS Expertise</h3>
             <div className="service-chips">
               {services.map((service) => (
-                <span key={service}>{service}</span>
+                <span key={service} className="chip">{service}</span>
               ))}
             </div>
           </div>
         </section>
 
-        <section id="projects" className="panel section-gap">
+        <section id="projects" className="section-container">
           <div className="section-head">
-            <h2>Featured Projects</h2>
-            <p>
-              Projects demonstrating deployment automation, system monitoring,
-              and cloud operations in real-world scenarios.
-            </p>
+            <h2>Featured Work</h2>
+            <p>Practical implementations demonstrating monitoring, automation, and scalable deployments.</p>
           </div>
 
           <div className="project-grid">
             {projects.map((project) => (
-              <article className="project-card" key={project.title}>
-                <p className="project-stack">{project.stack}</p>
+              <div className="project-card glass-panel" key={project.title}>
+                <div className="project-glow"></div>
+                <span className="project-stack">{project.stack}</span>
                 <h3>{project.title}</h3>
                 <p>{project.summary}</p>
-              </article>
+              </div>
             ))}
           </div>
         </section>
 
-        <section className="timeline section-gap">
-          <article className="panel timeline-item">
-            <p className="eyebrow">Experience</p>
-            <h2>DevOps and Cloud Engineer</h2>
-            <p className="muted">Sep 2025 - Present | Salem, Tamil Nadu</p>
-            <ul>
+        <section className="section-container">
+          <div className="experience-card glass-panel">
+            <span className="badge">Experience</span>
+            <h2>Cloud & DevOps Engineer</h2>
+            <p className="experience-meta">Sep 2025 - Present | Salem, Tamil Nadu</p>
+            <ul className="experience-list">
               <li>
-                Delivered 8+ AWS-based deployments with CI/CD workflows to
-                reduce manual effort and improve release reliability.
+                Engineered and maintained scalable AWS cloud architectures (EC2, VPC, S3) and managed core Linux server infrastructure for high availability.
               </li>
               <li>
-                Managed infrastructure components across EC2, S3, IAM, VPC,
-                and security groups for secure application hosting.
+                Built and optimized automated CI/CD pipelines using Jenkins and GitHub Actions to accelerate release cycles and minimize deployment errors.
               </li>
               <li>
-                Designed and maintained CI/CD pipelines with Jenkins and
-                GitHub Actions for automated build, test, and deployments.
+                Orchestrated containerized microservices using Docker and Kubernetes, ensuring consistent environments from development to production.
               </li>
               <li>
-                Built Dockerized deployments and supported Kubernetes
-                environments with observability using Prometheus and Grafana.
+                Deployed robust observability stacks with Prometheus and Grafana to monitor Linux performance, track system health, and proactively resolve bottlenecks.
               </li>
             </ul>
-          </article>
-        </section>
-
-        <section id="contact" className="panel section-gap contact-card">
-          <div className="section-head">
-            <h2>Contact</h2>
-            <p>Available for DevOps and Cloud engineering opportunities.</p>
-          </div>
-          <div className="contact-grid">
-            <a href="mailto:sharathraghav2003@gmail.com">sharathraghav2003@gmail.com</a>
-            <a
-              href="https://github.com/Sharath1863"
-              target="_blank"
-              rel="noreferrer"
-            >
-              github.com/Sharath1863
-            </a>
-            <a
-              href="https://www.linkedin.com/in/sharathchandra-"
-              target="_blank"
-              rel="noreferrer"
-            >
-              linkedin.com/in/sharathchandra-
-            </a>
-            <a href="tel:+919345331879">+91 9345331879</a>
-            <p>Salem, Tamil Nadu, India</p>
-            <p>LeetCode: sharath_chandra_20</p>
           </div>
         </section>
 
-        <section id="resume" className="panel resume-card section-gap">
-          <h2>Resume</h2>
-          <p>
-            Detailed resume is available for recruiters and hiring teams.
-            Request the latest PDF via email or connect on LinkedIn.
-          </p>
-          <div className="hero-actions">
-            <a className="btn btn-solid" href="mailto:sharathraghav2003@gmail.com">
-              Request Resume
-            </a>
-            <a
-              className="btn btn-ghost"
-              href="https://github.com/Sharath1863"
-              target="_blank"
-              rel="noreferrer"
-            >
-              View GitHub
-            </a>
+        <section id="contact" className="section-container">
+          <div className="contact-banner glass-panel">
+            <div className="contact-info">
+              <h2>Let's Connect</h2>
+              <p>Available for new opportunities in Cloud and Platform Engineering.</p>
+            </div>
+            <div className="contact-links">
+              <a href="mailto:sharathraghav2003@gmail.com" className="contact-link">
+                <span className="icon" style={{ display: 'flex' }}>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                </span> Email Me
+              </a>
+              <a href="https://github.com/Sharath1863" target="_blank" rel="noreferrer" className="contact-link">
+                <span className="icon"><i className="devicon-github-original"></i></span> GitHub
+              </a>
+              <a href="https://www.linkedin.com/in/sharathchandra-" target="_blank" rel="noreferrer" className="contact-link">
+                <span className="icon"><i className="devicon-linkedin-plain"></i></span> LinkedIn
+              </a>
+              <a href="tel:+919345331879" className="contact-link">
+                <span className="icon" style={{ display: 'flex' }}>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                </span> +91 9345331879
+              </a>
+            </div>
           </div>
         </section>
       </main>
 
-      <footer className="footer">© {new Date().getFullYear()} Sharath Chandra C</footer>
+      <footer className="footer text-muted">
+        <p>© {new Date().getFullYear()} Sharath Chandra C.</p>
+      </footer>
     </div>
   )
 }
