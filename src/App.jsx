@@ -68,10 +68,11 @@ function App() {
       <main>
         <section className="hero panel">
           <p className="eyebrow">AWS Cloud Engineer</p>
-          <h1>DevOps and Cloud Engineer focused on reliable AWS delivery.</h1>
+          <h1>Building reliable AWS platforms with automation-first DevOps.</h1>
           <p className="lead">
-            Hands-on experience across AWS infrastructure, CI/CD automation,
-            containerized deployments, and production monitoring.
+            DevOps and Cloud Engineer with hands-on delivery across AWS
+            infrastructure, CI/CD pipelines, containerized workloads, and
+            monitoring for production environments.
           </p>
           <div className="hero-actions">
             <a className="btn btn-solid" href="#projects">
@@ -84,11 +85,11 @@ function App() {
           <div className="metrics">
             <article>
               <h3>8+</h3>
-              <p>AWS application deployments completed</p>
+              <p>Production deployments delivered on AWS</p>
             </article>
             <article>
               <h3>3</h3>
-              <p>Featured projects in this portfolio</p>
+              <p>Portfolio projects with real implementation depth</p>
             </article>
             <article>
               <h3>2025-Present</h3>
@@ -101,8 +102,8 @@ function App() {
           <div className="section-head">
             <h2>Core Skills</h2>
             <p>
-              Strong delivery across cloud infrastructure, automation pipelines,
-              containers, and observability.
+              End-to-end capabilities across infrastructure, automation,
+              container orchestration, and observability.
             </p>
           </div>
 
@@ -129,8 +130,8 @@ function App() {
           <div className="section-head">
             <h2>Featured Projects</h2>
             <p>
-              Projects focused on CI/CD, monitoring, and production-grade AWS
-              deployments.
+              Projects demonstrating deployment automation, system monitoring,
+              and cloud operations in real-world scenarios.
             </p>
           </div>
 
@@ -174,7 +175,7 @@ function App() {
         <section id="contact" className="panel section-gap contact-card">
           <div className="section-head">
             <h2>Contact</h2>
-            <p>Open to Cloud and DevOps engineering roles and collaborations.</p>
+            <p>Available for DevOps and Cloud engineering opportunities.</p>
           </div>
           <div className="contact-grid">
             <a href="mailto:sharathraghav2003@gmail.com">sharathraghav2003@gmail.com</a>
@@ -201,8 +202,8 @@ function App() {
         <section id="resume" className="panel resume-card section-gap">
           <h2>Resume</h2>
           <p>
-            Resume is available for recruiters and hiring teams. You can
-            request the latest PDF directly by email or connect on LinkedIn.
+            Detailed resume is available for recruiters and hiring teams.
+            Request the latest PDF via email or connect on LinkedIn.
           </p>
           <div className="hero-actions">
             <a className="btn btn-solid" href="mailto:sharathraghav2003@gmail.com">
